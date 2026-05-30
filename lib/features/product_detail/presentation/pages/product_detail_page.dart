@@ -50,7 +50,7 @@ class _ProductDetailPageState extends ConsumerState<ProductDetailPage> {
       body: Stack(
         children: [
           const Positioned.fill(
-            child: BeanPatternBackground(opacity: 0.04, density: 20),
+            child: BeanPatternBackground(opacity: 0.07, density: 20),
           ),
           SafeArea(
             child: async.when(
