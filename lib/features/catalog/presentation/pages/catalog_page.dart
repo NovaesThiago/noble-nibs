@@ -115,7 +115,7 @@ class _CatalogPageState extends ConsumerState<CatalogPage> {
       body: Stack(
         children: [
           const Positioned.fill(
-            child: BeanPatternBackground(opacity: 0.04, density: 22),
+            child: BeanPatternBackground(opacity: 0.07, density: 22),
           ),
           SafeArea(
             child: Column(
@@ -136,7 +136,8 @@ class _CatalogPageState extends ConsumerState<CatalogPage> {
                         duration: const Duration(milliseconds: 250),
                         curve: Curves.easeOut,
                         padding: EdgeInsets.fromLTRB(
-                          AppSpacing.lg,
+                          // Mesmo left do header reduzido (input minimizado).
+                          AppSpacing.lg + AppSpacing.xs,
                           _collapsed ? AppSpacing.lg : AppSpacing.md,
                           AppSpacing.lg,
                           // Minimizado: mais espaço entre o título e o input.
@@ -156,6 +157,15 @@ class _CatalogPageState extends ConsumerState<CatalogPage> {
                                   switchOutCurve: Curves.easeOut,
                                   transitionBuilder: (child, anim) =>
                                       FadeTransition(opacity: anim, child: child),
+                                  // Alinha à esquerda (padrão é centralizado) →
+                                  // mesmo left no expandido e no minimizado.
+                                  layoutBuilder: (current, previous) => Stack(
+                                    alignment: Alignment.centerLeft,
+                                    children: [
+                                      ...previous,
+                                      if (current != null) current,
+                                    ],
+                                  ),
                                   child: _collapsed
                                       // Minimizado: título + "NOSSA SELEÇÃO" à direita.
                                       ? Row(
