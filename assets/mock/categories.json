@@ -1,0 +1,9 @@
+[
+  { "id": "all", "name": "Todos", "type": "all" },
+  { "id": "roast-light", "name": "Torra clara", "type": "roast" },
+  { "id": "roast-medium", "name": "Torra média", "type": "roast" },
+  { "id": "roast-dark", "name": "Torra escura", "type": "roast" },
+  { "id": "origin-brasil", "name": "Brasil", "type": "origin" },
+  { "id": "origin-etiopia", "name": "Etiópia", "type": "origin" },
+  { "id": "special-featured", "name": "Destaques", "type": "special" }
+]

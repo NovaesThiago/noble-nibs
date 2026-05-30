@@ -1,0 +1,148 @@
+[
+  {
+    "id": "bourbon-amarelo-minas",
+    "name": "Bourbon Amarelo",
+    "description": "Doçura alta e corpo aveludado, com notas de caramelo, amêndoa e um final achocolatado. Cultivado a 1.200m no Sul de Minas, colheita seletiva e secagem natural.",
+    "origin": { "country": "Brasil", "region": "Sul de Minas", "farm": "Fazenda Santa Inês" },
+    "roast": "medium",
+    "grinds": ["whole", "espresso", "filter", "frenchPress"],
+    "weights": [
+      { "grams": 250, "priceCents": 3500 },
+      { "grams": 500, "priceCents": 6500 },
+      { "grams": 1000, "priceCents": 12000 }
+    ],
+    "notes": { "acidity": 3, "body": 4, "sweetness": 5, "descriptors": ["Caramelo", "Amêndoa", "Cacau"] },
+    "rating": 4.7,
+    "reviewCount": 128,
+    "imageUrl": "",
+    "isFeatured": true,
+    "stock": 42
+  },
+  {
+    "id": "yirgacheffe-etiopia",
+    "name": "Yirgacheffe",
+    "description": "Floral e cítrico, acidez brilhante e corpo delicado. Notas de jasmim, bergamota e mel. Processo lavado, perfil clássico da Etiópia.",
+    "origin": { "country": "Etiópia", "region": "Yirgacheffe", "farm": "Cooperativa Konga" },
+    "roast": "light",
+    "grinds": ["whole", "filter"],
+    "weights": [
+      { "grams": 250, "priceCents": 4800 },
+      { "grams": 500, "priceCents": 9000 }
+    ],
+    "notes": { "acidity": 5, "body": 2, "sweetness": 4, "descriptors": ["Jasmim", "Bergamota", "Mel"] },
+    "rating": 4.9,
+    "reviewCount": 96,
+    "imageUrl": "",
+    "isFeatured": true,
+    "stock": 18
+  },
+  {
+    "id": "huila-colombia",
+    "name": "Huila Supremo",
+    "description": "Equilíbrio entre doçura e acidez cítrica, corpo médio e final limpo. Notas de pêssego, açúcar mascavo e nozes.",
+    "origin": { "country": "Colômbia", "region": "Huila", "farm": "Finca El Mirador" },
+    "roast": "medium",
+    "grinds": ["whole", "espresso", "filter", "moka"],
+    "weights": [
+      { "grams": 250, "priceCents": 4200 },
+      { "grams": 500, "priceCents": 7800 },
+      { "grams": 1000, "priceCents": 14500 }
+    ],
+    "notes": { "acidity": 4, "body": 3, "sweetness": 4, "descriptors": ["Pêssego", "Mascavo", "Nozes"] },
+    "rating": 4.6,
+    "reviewCount": 74,
+    "imageUrl": "",
+    "isFeatured": false,
+    "stock": 30
+  },
+  {
+    "id": "espresso-tradicional",
+    "name": "Espresso da Casa",
+    "description": "Blend autoral pensado para espresso: corpo encorpado, crema densa e final de chocolate amargo. Doçura natural sem amargor agressivo.",
+    "origin": { "country": "Brasil", "region": "Blend (Minas + Cerrado)", "farm": null },
+    "roast": "dark",
+    "grinds": ["whole", "espresso", "moka"],
+    "weights": [
+      { "grams": 250, "priceCents": 3200 },
+      { "grams": 500, "priceCents": 5900 },
+      { "grams": 1000, "priceCents": 10900 }
+    ],
+    "notes": { "acidity": 2, "body": 5, "sweetness": 3, "descriptors": ["Chocolate amargo", "Avelã", "Especiarias"] },
+    "rating": 4.5,
+    "reviewCount": 210,
+    "imageUrl": "",
+    "isFeatured": true,
+    "stock": 65
+  },
+  {
+    "id": "antigua-guatemala",
+    "name": "Antigua",
+    "description": "Corpo cremoso e acidez suave, com notas de cacau, caramelo e um toque de fumo doce. Solo vulcânico de Antigua.",
+    "origin": { "country": "Guatemala", "region": "Antigua", "farm": "Finca La Folie" },
+    "roast": "medium",
+    "grinds": ["whole", "filter", "frenchPress"],
+    "weights": [
+      { "grams": 250, "priceCents": 4600 },
+      { "grams": 500, "priceCents": 8700 }
+    ],
+    "notes": { "acidity": 3, "body": 4, "sweetness": 4, "descriptors": ["Cacau", "Caramelo", "Fumo doce"] },
+    "rating": 4.7,
+    "reviewCount": 53,
+    "imageUrl": "",
+    "isFeatured": false,
+    "stock": 12
+  },
+  {
+    "id": "geisha-panama",
+    "name": "Geisha",
+    "description": "Joia rara: floral intenso, notas de jasmim, mel e frutas tropicais. Acidez vibrante e final prolongado. Edição limitada.",
+    "origin": { "country": "Panamá", "region": "Boquete", "farm": "Hacienda La Esmeralda" },
+    "roast": "light",
+    "grinds": ["whole", "filter"],
+    "weights": [
+      { "grams": 200, "priceCents": 12900 }
+    ],
+    "notes": { "acidity": 5, "body": 3, "sweetness": 5, "descriptors": ["Jasmim", "Mel", "Maracujá"] },
+    "rating": 5.0,
+    "reviewCount": 31,
+    "imageUrl": "",
+    "isFeatured": true,
+    "stock": 6
+  },
+  {
+    "id": "cerrado-descafeinado",
+    "name": "Cerrado Descafeinado",
+    "description": "Descafeinado por processo natural (Swiss Water), preserva doçura e corpo. Notas de chocolate ao leite e caramelo.",
+    "origin": { "country": "Brasil", "region": "Cerrado Mineiro", "farm": "Fazenda Boa Vista" },
+    "roast": "medium",
+    "grinds": ["whole", "espresso", "filter"],
+    "weights": [
+      { "grams": 250, "priceCents": 3900 },
+      { "grams": 500, "priceCents": 7200 }
+    ],
+    "notes": { "acidity": 2, "body": 4, "sweetness": 4, "descriptors": ["Chocolate ao leite", "Caramelo"] },
+    "rating": 4.3,
+    "reviewCount": 47,
+    "imageUrl": "",
+    "isFeatured": false,
+    "stock": 24
+  },
+  {
+    "id": "sidama-etiopia",
+    "name": "Sidama Natural",
+    "description": "Processo natural com fermentação controlada: explosão de frutas vermelhas, notas de morango e vinho tinto. Corpo encorpado e doce.",
+    "origin": { "country": "Etiópia", "region": "Sidama", "farm": "Estação Bensa" },
+    "roast": "light",
+    "grinds": ["whole", "filter", "frenchPress"],
+    "weights": [
+      { "grams": 250, "priceCents": 5200 },
+      { "grams": 500, "priceCents": 9800 }
+    ],
+    "notes": { "acidity": 4, "body": 4, "sweetness": 5, "descriptors": ["Morango", "Vinho tinto", "Frutas vermelhas"] },
+    "rating": 4.8,
+    "reviewCount": 68,
+    "imageUrl": "",
+    "isFeatured": false,
+    "stock": 15
+  }
+]
