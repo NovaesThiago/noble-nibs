@@ -6,7 +6,6 @@ import 'package:noble_nibs/app/shell/app_shell.dart';
 import 'package:noble_nibs/features/about/presentation/pages/about_page.dart';
 import 'package:noble_nibs/features/addresses/presentation/pages/addresses_page.dart';
 import 'package:noble_nibs/features/security/presentation/pages/security_page.dart';
-import 'package:noble_nibs/core/providers/app_flags_provider.dart';
 import 'package:noble_nibs/features/auth/presentation/pages/login_page.dart';
 import 'package:noble_nibs/features/auth/presentation/pages/register_page.dart';
 import 'package:noble_nibs/features/auth/presentation/providers/auth_controller.dart';
@@ -37,10 +36,8 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: Routes.splash,
         builder: (context, _) => SplashPage(
-          onReady: () {
-            final seen = ref.read(onboardingSeenProvider);
-            context.go(seen ? Routes.welcome : Routes.onboarding);
-          },
+          // Tela de iniciar → leva para a Welcome.
+          onReady: () => context.go(Routes.welcome),
         ),
       ),
       GoRoute(
