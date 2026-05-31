@@ -62,3 +62,12 @@ Procure por `TODO(voce)`:
 Dados **mock** em memória (catálogo via JSON; carrinho/auth/pedidos/favoritos via `Notifier`).
 Trocar para backend real = substituir a camada `data` (datasources/repos) — as camadas
 `domain`/`presentation` não mudam.
+
+## Licença
+
+O **código-fonte** está sob a licença [MIT](./LICENSE).
+
+⚠️ A marca **"Noble Nibs"**, a **logo** e a **identidade visual** **não** estão cobertas
+pela MIT — são de propriedade exclusiva do autor, com todos os direitos reservados.
+Veja [TRADEMARKS.md](./TRADEMARKS.md). Ao reutilizar o código, substitua a marca, a logo
+e as imagens da pasta `assets/` por elementos próprios.
