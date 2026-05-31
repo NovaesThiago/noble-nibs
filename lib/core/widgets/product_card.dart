@@ -68,8 +68,20 @@ class ProductCard extends StatelessWidget {
                 AppSpacing.md,
               ),
               decoration: BoxDecoration(
-                color: AppColors.coffeeMid,
+                // Gradiente "cappuccino": leite/foam mais claro no topo →
+                // espresso no fundo, com brilho diagonal sutil.
+                gradient: const LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color(0xFF7C5636), // creme tostado (foam)
+                    AppColors.coffeeMid, // #5A3A1A
+                    Color(0xFF2E1D10), // espresso profundo
+                  ],
+                  stops: [0, 0.45, 1],
+                ),
                 borderRadius: BorderRadius.circular(AppRadius.lg),
+                border: Border.all(color: AppColors.caramel.withValues(alpha: 0.16)),
                 boxShadow: AppShadows.card,
               ),
               child: Column(
@@ -172,6 +184,8 @@ class _ImageDisc extends StatelessWidget {
           colors: [AppColors.caramel, AppColors.caramelDeep],
           center: Alignment(-0.3, -0.4),
         ),
+        // Aro creme (borda da xícara) + sombra.
+        border: Border.all(color: AppColors.cream, width: 3),
         boxShadow: AppShadows.card,
       ),
       clipBehavior: Clip.antiAlias,
