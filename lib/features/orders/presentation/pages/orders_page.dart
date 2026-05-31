@@ -73,28 +73,50 @@ class _OrderCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppRadius.lg),
           boxShadow: AppShadows.soft,
         ),
-        child: Column(
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Text('Pedido ${order.id}', style: AppTypography.button.copyWith(color: context.ink)),
-                const Spacer(),
-                _StatusChip(status: order.status),
-              ],
+            // Pacote da marca como miniatura do pedido.
+            Container(
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(
+                color: context.chipBg,
+                borderRadius: BorderRadius.circular(AppRadius.md),
+              ),
+              clipBehavior: Clip.antiAlias,
+              child: Image.asset('assets/images/pacote-noble-nibs.png', fit: BoxFit.cover),
             ),
-            const SizedBox(height: AppSpacing.xs),
-            Text(
-              '${Formatters.date(order.createdAt)} · ${order.itemCount} ${order.itemCount == 1 ? 'item' : 'itens'}',
-              style: AppTypography.label.copyWith(letterSpacing: 0),
-            ),
-            const SizedBox(height: AppSpacing.md),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(order.total.formatted, style: AppTypography.titleLarge.copyWith(fontSize: 18)),
-                Icon(Icons.chevron_right_rounded, color: context.inkSoft),
-              ],
+            const SizedBox(width: AppSpacing.md),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text('Pedido ${order.id}',
+                            style: AppTypography.button.copyWith(color: context.ink)),
+                      ),
+                      _StatusChip(status: order.status),
+                    ],
+                  ),
+                  const SizedBox(height: AppSpacing.xs),
+                  Text(
+                    '${Formatters.date(order.createdAt)} · ${order.itemCount} ${order.itemCount == 1 ? 'item' : 'itens'}',
+                    style: AppTypography.label.copyWith(letterSpacing: 0),
+                  ),
+                  const SizedBox(height: AppSpacing.md),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(order.total.formatted,
+                          style: AppTypography.titleLarge.copyWith(fontSize: 18)),
+                      Icon(Icons.chevron_right_rounded, color: context.inkSoft),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
