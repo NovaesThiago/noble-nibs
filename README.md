@@ -21,8 +21,7 @@ flutter run              # emulador/dispositivo
 ```
 
 ## Arquitetura
-Clean Architecture **feature-first** (`data` → `domain` ← `presentation`). Veja o plano completo
-em `/.claude/plans/...` ou a estrutura em `lib/`:
+Clean Architecture **feature-first** (`data` → `domain` ← `presentation`). Estrutura em `lib/`:
 - `core/` — tema, design system (`widgets/`), erros, storage, segurança, utils, providers globais
 - `features/<feature>/{data,domain,presentation}` — catálogo, detalhe, carrinho, auth, checkout,
   pedidos, favoritos, perfil, onboarding, splash
