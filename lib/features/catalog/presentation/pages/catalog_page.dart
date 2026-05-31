@@ -115,7 +115,7 @@ class _CatalogPageState extends ConsumerState<CatalogPage> {
       body: Stack(
         children: [
           const Positioned.fill(
-            child: BeanPatternBackground(opacity: 0.07, density: 22),
+            child: BeanPatternBackground(opacity: 0.12, density: 24),
           ),
           SafeArea(
             child: Column(
