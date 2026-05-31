@@ -30,5 +30,32 @@ void main() {
 
       expect(find.byType(CircularProgressIndicator), findsOneWidget);
     });
+
+    testWidgets('não estoura (overflow) com rótulo longo em espaço estreito', (tester) async {
+      await tester.binding.setSurfaceSize(const Size(320, 600));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: Row(
+              children: [
+                const SizedBox(width: 150), // simula o seletor de quantidade
+                Expanded(
+                  child: AppButton.primary(
+                    r'Adicionar · R$ 1.299,00',
+                    icon: Icons.add_shopping_cart_rounded,
+                    onPressed: () {},
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(tester.takeException(), isNull);
+    });
   });
 }

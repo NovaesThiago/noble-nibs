@@ -117,15 +117,24 @@ class AppButton extends StatelessWidget {
                         color: Colors.white,
                       ),
                     )
-                  : Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (icon != null) ...[
-                          Icon(icon, size: 20, color: fg),
-                          const SizedBox(width: AppSpacing.sm),
+                  // FittedBox(scaleDown) impede overflow: se o rótulo + ícone
+                  // não couberem na largura do botão, reduz para caber.
+                  : FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          if (icon != null) ...[
+                            Icon(icon, size: 20, color: fg),
+                            const SizedBox(width: AppSpacing.sm),
+                          ],
+                          Text(
+                            label,
+                            maxLines: 1,
+                            style: AppTypography.button.copyWith(color: fg),
+                          ),
                         ],
-                        Text(label, style: AppTypography.button.copyWith(color: fg)),
-                      ],
+                      ),
                     ),
             ),
           ),
