@@ -3,6 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:noble_nibs/app/router/routes.dart';
 import 'package:noble_nibs/app/shell/app_shell.dart';
+import 'package:noble_nibs/features/about/presentation/pages/about_page.dart';
+import 'package:noble_nibs/features/addresses/presentation/pages/addresses_page.dart';
+import 'package:noble_nibs/features/security/presentation/pages/security_page.dart';
 import 'package:noble_nibs/core/providers/app_flags_provider.dart';
 import 'package:noble_nibs/features/auth/presentation/pages/login_page.dart';
 import 'package:noble_nibs/features/auth/presentation/pages/register_page.dart';
@@ -123,6 +126,9 @@ final goRouterProvider = Provider<GoRouter>((ref) {
                   onOpenOrders: () => context.push(Routes.orders),
                   onLogin: () => context.push(Routes.login),
                   onLogout: () => context.go(Routes.welcome),
+                  onOpenAddresses: () => context.push(Routes.addresses),
+                  onOpenSecurity: () => context.push(Routes.security),
+                  onOpenAbout: () => context.push(Routes.about),
                 ),
               ),
             ],
@@ -154,6 +160,18 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           onViewOrder: () => context.go(Routes.orderPath(state.pathParameters['id']!)),
           onBackToShop: () => context.go(Routes.catalog),
         ),
+      ),
+      GoRoute(
+        path: Routes.addresses,
+        builder: (context, _) => AddressesPage(onBack: () => context.pop()),
+      ),
+      GoRoute(
+        path: Routes.security,
+        builder: (context, _) => SecurityPage(onBack: () => context.pop()),
+      ),
+      GoRoute(
+        path: Routes.about,
+        builder: (context, _) => AboutPage(onBack: () => context.pop()),
       ),
       GoRoute(
         path: Routes.orders,

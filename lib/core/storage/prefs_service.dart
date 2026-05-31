@@ -19,6 +19,7 @@ class PrefsService {
 
   static const _kThemeMode = 'theme_mode';
   static const _kOnboardingSeen = 'onboarding_seen';
+  static const _kBiometric = 'biometric_enabled';
 
   String? get themeMode => _prefs.getString(_kThemeMode);
   Future<void> setThemeMode(String value) => _prefs.setString(_kThemeMode, value);
@@ -26,6 +27,10 @@ class PrefsService {
   bool get onboardingSeen => _prefs.getBool(_kOnboardingSeen) ?? false;
   Future<void> setOnboardingSeen(bool value) =>
       _prefs.setBool(_kOnboardingSeen, value);
+
+  bool get biometricEnabled => _prefs.getBool(_kBiometric) ?? false;
+  Future<void> setBiometricEnabled(bool value) =>
+      _prefs.setBool(_kBiometric, value);
 }
 
 final prefsServiceProvider = Provider<PrefsService>(

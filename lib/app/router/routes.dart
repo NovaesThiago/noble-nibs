@@ -8,6 +8,9 @@ abstract final class Routes {
   static const register = '/register';
   static const checkout = '/checkout';
   static const orders = '/orders';
+  static const addresses = '/addresses';
+  static const security = '/security';
+  static const about = '/about';
 
   // Abas do shell (bottom nav)
   static const catalog = '/catalog';

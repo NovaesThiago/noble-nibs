@@ -8,11 +8,22 @@ import 'package:noble_nibs/features/auth/presentation/providers/auth_controller.
 
 /// Aba de perfil e configurações.
 class ProfilePage extends ConsumerWidget {
-  const ProfilePage({super.key, this.onOpenOrders, this.onLogout, this.onLogin});
+  const ProfilePage({
+    super.key,
+    this.onOpenOrders,
+    this.onLogout,
+    this.onLogin,
+    this.onOpenAddresses,
+    this.onOpenSecurity,
+    this.onOpenAbout,
+  });
 
   final VoidCallback? onOpenOrders;
   final VoidCallback? onLogout;
   final VoidCallback? onLogin;
+  final VoidCallback? onOpenAddresses;
+  final VoidCallback? onOpenSecurity;
+  final VoidCallback? onOpenAbout;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -70,9 +81,9 @@ class ProfilePage extends ConsumerWidget {
             Text('CONTA', style: AppTypography.overline),
             const SizedBox(height: AppSpacing.sm),
             _Tile(icon: Icons.receipt_long_outlined, label: 'Meus pedidos', onTap: onOpenOrders),
-            _Tile(icon: Icons.location_on_outlined, label: 'Endereços', onTap: () {}),
-            _Tile(icon: Icons.fingerprint_rounded, label: 'Segurança e biometria', onTap: () {}),
-            _Tile(icon: Icons.info_outline_rounded, label: 'Sobre o Noble Nibs', onTap: () {}),
+            _Tile(icon: Icons.location_on_outlined, label: 'Endereços', onTap: onOpenAddresses),
+            _Tile(icon: Icons.fingerprint_rounded, label: 'Segurança e biometria', onTap: onOpenSecurity),
+            _Tile(icon: Icons.info_outline_rounded, label: 'Sobre o Noble Nibs', onTap: onOpenAbout),
             if (user != null)
               _Tile(
                 icon: Icons.logout_rounded,
